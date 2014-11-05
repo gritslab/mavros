@@ -251,7 +251,7 @@ target_link_libraries(gcs_bridge
 #catkin_install_python(PROGRAMS
 #  ${SCRIPTS}
 #  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+#)
 
 ## Mark executables and/or libraries for installation
 #install(TARGETS mavconn mavros mavros_plugins mavros_node gcs_bridge
