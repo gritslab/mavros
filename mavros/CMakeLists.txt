@@ -247,39 +247,39 @@ target_link_libraries(gcs_bridge
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-file(GLOB SCRIPTS ${PROJECT_SOURCE_DIR}/scripts/*)
-catkin_install_python(PROGRAMS
-  ${SCRIPTS}
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#file(GLOB SCRIPTS ${PROJECT_SOURCE_DIR}/scripts/*)
+#catkin_install_python(PROGRAMS
+#  ${SCRIPTS}
+#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 ## Mark executables and/or libraries for installation
-install(TARGETS mavconn mavros mavros_plugins mavros_node gcs_bridge
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+#install(TARGETS mavconn mavros mavros_plugins mavros_node gcs_bridge
+ # ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
 
 ## Mark cpp header files for installation
-install(DIRECTORY include/${PROJECT_NAME}/
-  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-  FILES_MATCHING PATTERN "*.h"
-)
+#install(DIRECTORY include/${PROJECT_NAME}/
+#  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+#  FILES_MATCHING PATTERN "*.h"
+#)
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
-install(FILES
-  mavros_plugins.xml
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
+#install(FILES
+#  mavros_plugins.xml
+#  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+#)
 
-install(DIRECTORY launch/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
-)
+#install(DIRECTORY launch/
+#  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+#)
 
 ## Install cmake files (thanks to cmake_modules package)
-install(DIRECTORY cmake/Modules
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/cmake
-)
+#install(DIRECTORY cmake/Modules
+#  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/cmake
+#)
 
 #############
 ## Testing ##
@@ -287,9 +287,9 @@ install(DIRECTORY cmake/Modules
 
 ## Add gtest based cpp test target and link libraries
 catkin_add_gtest(mavconn-test test/test_mavconn.cpp)
-if(TARGET mavconn-test)
-  target_link_libraries(mavconn-test mavconn)
-endif()
+#if(TARGET mavconn-test)
+#  target_link_libraries(mavconn-test mavconn)
+#endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
